@@ -78,8 +78,8 @@ jupyter
 - [x] Notebook 01: Data collection — pull and cache market data
 - [x] Notebook 02: Preprocessing — returns, normalization, cleaning
 - [x] Notebook 03: Takens embedding — FNN + point clouds
-- [ ] Notebook 04: Visibility graphs — alternative pipeline
-- [ ] src/ modules — clean reusable pipeline code
+- [x] Notebook 04: Visibility graphs — alternative pipeline
+- [x] src/ modules — clean reusable pipeline code
 - [ ] tests/ — unit tests for pipeline components
 
 ---
@@ -89,6 +89,7 @@ jupyter
 - Gidea & Katz (2018) — *Topological Data Analysis of Financial Time Series* — [arxiv.org/abs/1703.04385](https://arxiv.org/abs/1703.04385)
 - Takens (1981) — *Detecting Strange Attractors in Turbulence*
 - Güzel (2026) — *Persistent Homology of Time Series through Complex Networks* — [arxiv.org/abs/2605.01624](https://arxiv.org/abs/2605.01624)
+- Lacasa et al. (2008) — *From time series to complex networks: The visibility graph* — [arxiv.org/abs/0901.0951](https://arxiv.org/abs/0901.0951)
 - [yfinance documentation](https://pypi.org/project/yfinance/)
 
 ---
