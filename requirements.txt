@@ -9,3 +9,4 @@ giotto-tda
 gudhi
 jupyter
 scikit-learn
+networkx
