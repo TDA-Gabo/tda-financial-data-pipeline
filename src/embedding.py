@@ -73,4 +73,27 @@ def takens_embedding(series, d):
 
     Returns
     -------
-    X : np.ndarray, sha
+    X : np.ndarray, shape (n - d + 1, d)
+        Point cloud in R^d
+    """
+    n = len(series)
+    return np.array([series[i:i+d] for i in range(n - d + 1)])
+
+
+def pca_projection(X, n_components=2):
+    """
+    Project a point cloud onto its first n principal components.
+
+    Parameters
+    ----------
+    X : np.ndarray, shape (n_points, n_dimensions)
+    n_components : int
+
+    Returns
+    -------
+    X_pca : np.ndarray, shape (n_points, n_components)
+    variance_explained : np.ndarray
+    """
+    pca = PCA(n_components=n_components)
+    X_pca = pca.fit_transform(X)
+    return X_pca, pca.explained_variance_ratio_

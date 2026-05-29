@@ -75,15 +75,14 @@ jupyter
 
 ## Roadmap
 
-- [ ] Notebook 01: Data collection — pull and cache market data
-- [ ] Notebook 02: Preprocessing — returns, normalization, cleaning
-- [ ] Notebook 03: Takens embedding — 1D series to point clouds
+- [x] Notebook 01: Data collection — pull and cache market data
+- [x] Notebook 02: Preprocessing — returns, normalization, cleaning
+- [x] Notebook 03: Takens embedding — FNN + point clouds
+- [ ] Notebook 04: Visibility graphs — alternative pipeline
 - [ ] src/ modules — clean reusable pipeline code
 - [ ] tests/ — unit tests for pipeline components
 
 ---
-
-## References
 
 ## References
 
