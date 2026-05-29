@@ -85,8 +85,11 @@ jupyter
 
 ## References
 
+## References
+
 - Gidea & Katz (2018) — *Topological Data Analysis of Financial Time Series* — [arxiv.org/abs/1703.04385](https://arxiv.org/abs/1703.04385)
 - Takens (1981) — *Detecting Strange Attractors in Turbulence*
+- Güzel (2026) — *Persistent Homology of Time Series through Complex Networks* — [arxiv.org/abs/2605.01624](https://arxiv.org/abs/2605.01624)
 - [yfinance documentation](https://pypi.org/project/yfinance/)
 
 ---
