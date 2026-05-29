@@ -7,13 +7,19 @@
 
 ## What This Repo Does
 
-Financial time series are 1D (1-dimensional) sequences — TDA needs point clouds in metric spaces. The pipeline has three stages:
+Financial time series are 1D (1-dimensional) sequences — TDA needs point clouds in metric spaces. The pipeline has two routes:
 
+**Route A — Takens Embedding:**
 1. **Data Collection** — pull raw OHLCV data from Yahoo Finance via `yfinance`
 2. **Preprocessing** — compute returns, handle missing data, normalize
-3. **Takens Embedding** — convert 1D return series into point clouds ready for TDA
+3. **Takens Embedding** — convert 1D return series into point clouds via FNN + sliding window
 
-The output feeds directly into the future projects in signal generation, risk monitoring, and regime detection.
+**Route B — Visibility Graphs:**
+1. **Data Collection** — same as Route A
+2. **Preprocessing** — same as Route A
+3. **Visibility Graphs** — convert 1D return series into graphs (NVG and HVG), then dissimilarity matrices
+
+Both routes produce TDA-ready inputs. Their topological outputs are compared in the downstream analysis.
 
 ---
 
@@ -26,18 +32,20 @@ tda-financial-data-pipeline/
 ├── notebooks/
 │   ├── 01_data_collection.ipynb
 │   ├── 02_preprocessing.ipynb
-│   └── 03_takens_embedding.ipynb
+│   ├── 03_takens_embedding.ipynb
+│   └── 04_visibility_graphs.ipynb
 ├── src/
 │   ├── __init__.py
-│   ├── data.py          ← data collection & caching
-│   ├── preprocessing.py ← returns, normalization, cleaning
-│   └── embedding.py     ← Takens embedding
+│   ├── data.py             ← data collection & caching
+│   ├── preprocessing.py    ← returns, normalization, cleaning
+│   ├── embedding.py        ← FNN + Takens embedding
+│   └── visibility.py       ← NVG and HVG construction
 ├── data/
-│   └── raw/             ← cached market data
+│   ├── raw/                ← cached market data
+│   └── processed/          ← normalized returns, dissimilarity matrices
 └── tests/
-    └── test_pipeline.py
+    └── test_pipeline.py    ← 11 unit tests, all passing
 ```
-
 ---
 
 ## Installation
@@ -69,6 +77,7 @@ giotto-tda      # TDA pipeline
 gudhi           # TDA library
 scikit-learn    # ML utilities
 jupyter
+networkx        # Visibility graphs
 ```
 
 ---
@@ -80,7 +89,7 @@ jupyter
 - [x] Notebook 03: Takens embedding — FNN + point clouds
 - [x] Notebook 04: Visibility graphs — alternative pipeline
 - [x] src/ modules — clean reusable pipeline code
-- [ ] tests/ — unit tests for pipeline components
+- [x] tests/ — unit tests for pipeline components
 
 ---
 
