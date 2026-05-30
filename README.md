@@ -1,4 +1,5 @@
 # TDA Financial Data Pipeline
+[![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/TDA-Gabo/tda-financial-data-pipeline/tree/main/notebooks/)
 ### From raw market data to TDA-ready point clouds
 
 > Raw price data means nothing to TDA. This repo builds the bridge — cleaning, transforming, and embedding financial time series into the geometric structures that topology can analyze.
